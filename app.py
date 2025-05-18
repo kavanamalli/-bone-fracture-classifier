@@ -1,7 +1,7 @@
 import os
 import gdown
 
-model_url = 'https://drive.google.com/uc?id=FILE_ID'  # Replace with actual FILE_ID
+model_url = 'https://drive.google.com/file/d/1ZLXoTMb2Le_fvO4d9nQnvBoJgrOWlsUp/view?usp=sharing'  # Replace with actual FILE_ID
 model_path = 'custom_cnn_best_model.keras'
 
 if not os.path.exists(model_path):
