@@ -1,8 +1,15 @@
 import os
-import gdown
+import urllib.request
 
-model_url = 'https://drive.google.com/file/d/1ZLXoTMb2Le_fvO4d9nQnvBoJgrOWlsUp/view?usp=sharing'  # Replace with actual FILE_ID
-model_path = 'custom_cnn_best_model.keras'
+# URL and destination
+file_id = "1ZLXoTMb2Le_fvO4d9nQnvBoJgrOWlsUp"
+model_url = f"https://drive.google.com/uc?export=download&id={file_id}"
+model_path = "custom_cnn_best_model.keras"
+
+# Download the file
+urllib.request.urlretrieve(model_url, model_path)
+
+
 
 if not os.path.exists(model_path):
     gdown.download(model_url, model_path, quiet=False)
